@@ -1,0 +1,51 @@
+body {
+ font-family: 'Varela Round', Helvetica, sans-serif;
+ background-color: #e8fcff;
+ color:#3299a8;
+ margin:40pt;
+}
+
+
+
+/* Link CSS */
+a:link {
+    color: #3299a8;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #3299a8;
+}
+
+a:hover {
+    color: #bfbfbf;
+}
+
+
+
+#main {
+ width:75%;
+}
+
+#main div {
+ font-size:14pt;
+ font-weight:bold;
+ padding-right:40px;
+ padding-bottom:21px;
+ line-height: 30px;
+}
+
+
+
+#info {
+ background:#fff;
+ top:0;
+ right:0;
+ bottom:0;
+ position:fixed;
+ height:100%;
+ width:25%;
+ color:#333;
+ border-left:3px #3299a8 solid;
+ padding:20px;
+}
