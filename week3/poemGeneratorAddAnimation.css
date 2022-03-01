@@ -1,0 +1,197 @@
+body {
+ font-family: 'Varela Round', Helvetica, sans-serif;
+ color:#3299a8;
+ margin:40px;
+}
+
+
+
+/* Link CSS */
+a:link {
+    color: #3299a8;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #3299a8;
+}
+
+a:hover {
+    color: #bfbfbf;
+}
+
+#info {
+ background:#fff;
+ top:0;
+ right:0;
+ bottom:0;
+ position:fixed;
+ height:auto;
+ width:25%;
+ color:#333;
+ border-left:3px #3299a8 solid;
+ padding:20px;
+}
+
+#main {
+ height: 100%;
+ width:70%;
+ -webkit-user-select: none; /* Safari */
+ -ms-user-select: none; /* IE 10 and IE 11 */
+ user-select: none; /* Standard syntax */
+}
+
+#main div {
+ font-size:14pt;
+ font-weight:bold;
+ line-height:30px;
+ padding-left: 25px;
+ padding-top: 20px;
+ padding-right: 250px;
+}
+
+
+.card-column-div{
+    position: fixed;
+    top:0;
+    bottom:0;
+    right:0;
+    height:auto;
+    width: 25%;
+    margin-right: 25%;
+    z-index: -1;
+}
+
+
+/* Source:  https://learn.shayhowe.com/advanced-html-css/transitions-animations/ */
+.card-container {
+  height: 150px;
+  width: 150px;
+  perspective: 600;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 25px;
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.card {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 2s ease-in-out;
+  width: 100%;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card .side {
+  backface-visibility: hidden;
+  border-radius: 5px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+
+.card img {
+    width: 150px;
+    height: auto;
+}
+
+.card .back {
+  background: #fff178;
+  transform: rotateY(180deg);
+}
+
+.card p {
+  padding: 3px;
+  text-align: center;
+  font-weight: bold;
+  color: orange;
+  font-size: 12pt;
+  line-height: 1.4;
+}
+
+
+
+
+
+@media only screen and (max-width: 1050px) {
+    #main div {
+        padding-right:200px;
+        /*background-color: yellow;*/
+    }
+
+    .card-column-div{
+        margin-right: 28%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .card-column-div{
+        margin-right: 30%;
+    }
+
+    .card-container {
+      height: 120px;
+      width: 120px;
+     }
+     
+    .card img {
+        width: 120px;
+    }
+
+    .card p {
+      font-size: 11pt;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        margin-left: 1px;
+    }
+
+   #main div {
+        font-size:12pt;
+        padding-right:130px;
+        /*background-color: red;*/
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .card-container {
+      margin-left: 0;
+      height: 100px;
+      width: 100px;
+    }
+
+    .card img {
+        width: 100px;
+    }
+
+    .card p {
+      font-size: 9pt;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .card-container {
+      height: 80px;
+      width: 80px;
+    }
+
+    .card img {
+        width: 80px;
+    }
+
+    #main div {
+        padding-right:115px;
+        /*background-color: pink;*/
+    }
+}
