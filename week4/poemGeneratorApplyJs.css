@@ -1,0 +1,159 @@
+body {
+ font-family: 'Varela Round', Helvetica, sans-serif;
+ color:#3299a8;
+ margin:40px;
+}
+
+
+
+/* Link CSS */
+a:link {
+    color: #3299a8;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #3299a8;
+}
+
+a:hover {
+    color: #bfbfbf;
+}
+
+
+
+#poemButton {
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 20px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  background-color: white; 
+  color: #3299a8; 
+  border: 3px solid #3299a8;
+  border-radius: 5px;
+}
+
+#poemButton:hover {
+  background-color: #3299a8;
+  color: white;
+}
+
+
+
+#info {
+ background:#fff;
+ top:0;
+ right:0;
+ bottom:0;
+ position:fixed;
+ height:auto;
+ width:25%;
+ color:#333;
+ border-left:3px #3299a8 solid;
+ padding:20px;
+ z-index: 3;
+}
+
+#main {
+ height: 100%;
+ width:70%;
+ -webkit-user-select: none; /* Safari */
+ -ms-user-select: none; /* IE 10 and IE 11 */
+ user-select: none; /* Standard syntax */
+}
+
+#main div {
+ font-size:14pt;
+ font-weight:bold;
+ line-height:30px;
+ padding-left: 25px;
+ padding-top: 20px;
+ padding-right: 250px;
+}
+
+.card-column-div{
+    position: fixed;
+    top:0;
+    bottom:0;
+    right:0;
+    height:auto;
+    width: 25%;
+    margin-right: 25%;
+    z-index: 2;
+}
+
+
+.cardImg{
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 25px;
+}
+
+
+
+
+
+@media only screen and (max-width: 1050px) {
+    #main div {
+        padding-right:200px;
+        /*background-color: yellow;*/
+    }
+
+    .card-column-div{
+        margin-right: 28%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .card-column-div{
+        margin-right: 31%;
+    }
+     
+    .cardImg {
+        width: 120px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        margin-left: 1px;
+    }
+
+   #main div {
+        font-size:12pt;
+        padding-right:130px;
+        /*background-color: red;*/
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .card-column-div{
+        margin-right: 33%;
+    }
+
+    .cardImg {
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .cardImg {
+        width: 80px;
+    }
+
+    #main div {
+        padding-right:115px;
+        /*background-color: pink;*/
+    }
+}

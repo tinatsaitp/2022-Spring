@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> HW #4 - Poem Generator & JavaScript Event </title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- google font: https://fonts.google.com/specimen/Varela+Round?query=Round#standard-styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <link href="poemGeneratorApplyJs.css" rel="stylesheet" type="text/css">
+
+    <!-- link to p5 -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+    <script src="particles.js" type="text/javascript"></script>
+</head>
+
+
+
+
+
+<body onload="produce_litany();">
+<div id="info">
+    <h2>
+        <em> Be Yourself </em>
+        <br>
+        <a href="https://arttinatsai.weebly.com/" target="_blank">Yun-Ting Tsai</a>
+    </h2>
+
+    <p>Based on
+    <br>
+    <a href="http://nickm.com/memslam/a_house_of_dust.html" target="_blank">“A House of Dust”</a> by
+    <br>
+    Alison Knowles &amp;
+    <br>
+    James Tenney
+    <br><br>
+    Original code got from <a href="http://nickm.com" target="_blank">Nick Montfort</a>
+    </p>
+</div>
+
+<div class="card-column-div">    
+    <img id="cardImg01" class="cardImg" onmouseover="setBackImage1()" onmouseout="setFrontImage1()" src="images/taylorSwift.jpg"/>
+    <img id="cardImg02" class="cardImg" onmouseover="setBackImage2()" onmouseout="setFrontImage2()" src="images/tyraBanks.jpg"/>
+    <img id="cardImg03" class="cardImg" onmouseover="setBackImage3()" onmouseout="setFrontImage3()" src="images/brettHull.jpg"/>
+    <img id="cardImg04" class="cardImg" onmouseover="setBackImage4()" onmouseout="setFrontImage4()" src="images/royBennett.jpg"/>  
+</div>
+
+<div id="main"></div>
+
+<button id="poemButton">Create New Poem</button>
+
+<script src="cardImageSwitchText.js" type="text/javascript"></script>
+<script src="poemGeneratorApplyJs.js" type="text/javascript"></script>
+
+</body>
+</html>
