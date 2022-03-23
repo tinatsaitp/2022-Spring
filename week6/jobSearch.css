@@ -1,0 +1,66 @@
+body {
+	font-family: 'Varela Round', Helvetica, sans-serif;
+	background-color: #3299a8;
+	margin: 0;
+	align-items: center;
+}
+
+h1 {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+#search-bar {
+	margin-left: auto;
+	margin-right: auto;
+	width: 515px;
+	display: flex;
+    align-items: stretch;
+}
+
+.search-input,
+.search-btn {
+	outline: 0;
+	font-size: 20px;
+	width: 80%;
+	padding: 0 15px;
+	border: none;
+	height: 50px;
+}
+
+.search-input{
+	width: 400px;
+    color: black;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.search-input::placeholder{
+    color: gray;
+}
+
+.search-btn{
+	cursor: pointer;
+    width: 100px;
+    background: pink;
+    color: #fff;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    transition: all 0.2s linear;
+}
+
+.btn:active {
+	transform: scale(0.95);
+}
+
+
+
+#job-lists {
+	margin-top: 35px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: lightblue;
+	width: 80%;
+	height: 530px;
+}
