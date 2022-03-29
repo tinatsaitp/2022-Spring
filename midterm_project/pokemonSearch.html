@@ -1,0 +1,170 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+  <title> Pokemon API Midterm Project </title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- google font: https://fonts.google.com/specimen/Varela+Round?query=Round#standard-styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  <link rel="stylesheet" href="pokemonSearch.css" type="text/css">
+</head>
+
+
+
+
+
+<body>
+  <h1> Welcome to the Pokemon World </h1>
+  <p id="cited">Created by Yun-Ting Tsai <br> Reference: <a href="https://www.youtube.com/watch?v=XL68br6JyYs&t=787s" target="_blank">Florin Pop</a> & <a href="https://www.youtube.com/watch?v=Iz5iNOMCIjY&t=1638s" target="_blank">Imaginary Engineering</a></p>
+  <div class="content">
+    <h2> Want to pick your favorite Pokemon, <br> But don't know how to start? </h2>
+    <h3>You come to the right place!</h3>
+  </div>
+  <div class="content">
+    <h3> Rules: </h3>
+    <p>
+      1. Click the button in each Egg Group <br>
+      2. The computer will randomly select 3 Pokemons from each Egg Group <br> (Note: The result can be 1 or 2 in special cases)<br>
+      3. Each Pokemon card has the Pokemon's pokedex, name, picture, and type <br> 
+      4. Each card's color is defined by their primary Pokemon type
+    </p>
+    <h3>There are 15 Egg Groups in total. Enjoy finding Pokemons that interest you!</h3>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <button class="btn-back" id="pokemon_monster"><span class="btn-front">Monster Egg Group</span></button class="btn-back">
+      <div id="container01" class="box-container"></div>
+    </div>
+    <div class="column">
+      <button class="btn-back" id="pokemon_bug"><span class="btn-front">Bug Egg Group</span></button class="btn-back">
+      <div id="container02" class="box-container"></div>
+    </div>
+    <div class="column">
+      <button class="btn-back" id="pokemon_flying"><span class="btn-front">Flying Egg Group</span></button class="btn-back">
+      <div id="container03" class="box-container"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <button class="btn-back" id="pokemon_water01"><span class="btn-front">Water 1 Egg Group</span></button class="btn-back">
+      <div id="container04" class="box-container"></div>
+    </div>
+
+    <div class="column">
+      <button class="btn-back" id="pokemon_water02"><span class="btn-front">Water 2 Egg Group</span></button class="btn-back">
+      <div id="container05" class="box-container"></div>
+    </div>
+
+    <div class="column">
+      <button class="btn-back" id="pokemon_water03"><span class="btn-front">Water 3 Egg Group</span></button class="btn-back">
+      <div id="container06" class="box-container"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <button class="btn-back" id="pokemon_ground"><span class="btn-front">Field Egg Group</span></button class="btn-back">
+      <div id="container07" class="box-container"></div>
+    </div>
+
+    <div class="column">
+      <button class="btn-back" id="pokemon_fairy"><span class="btn-front">Fairy Egg Group</span></button class="btn-back">
+      <div id="container08" class="box-container"></div>
+    </div>
+
+    <div class="column">
+      <button class="btn-back" id="pokemon_plant"><span class="btn-front">Grass Egg Group</span></button class="btn-back">
+      <div id="container09" class="box-container"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <button class="btn-back" id="pokemon_humanlike"><span class="btn-front">Human-Like Egg Group</span></button class="btn-back">
+      <div id="container10" class="box-container"></div>
+    </div>
+
+    <div class="column">
+      <button class="btn-back" id="pokemon_mineral"><span class="btn-front">Mineral Egg Group</span></button class="btn-back">
+      <div id="container11" class="box-container"></div>
+    </div>
+
+    <div class="column">
+      <button class="btn-back" id="pokemon_indeterminate"><span class="btn-front">Amorphous Egg Group</span></button class="btn-back">
+      <div id="container12" class="box-container"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <button class="btn-back" id="pokemon_ditto"><span class="btn-front">Ditto Egg Group</span></button class="btn-back">
+      <div id="container13" class="box-container"></div>
+    </div>
+
+    <div class="column">
+      <button class="btn-back" id="pokemon_dragon"><span class="btn-front">Dragon Egg Group</span></button class="btn-back">
+      <div id="container14" class="box-container"></div>
+    </div>
+
+    <div class="column">
+      <button class="btn-back" id="pokemon_others"><span class="btn-front">No Eggs Discovered Group</span></button class="btn-back">
+      <div id="container15" class="box-container"></div>
+    </div>
+  </div>
+
+
+
+  <div class="content">
+    <h3> Rules: </h3>
+    <p>
+      1. After looking through 15 Egg Groups, you can search for Pokemons you are interested in <br>
+      2. The search result focuses on the Pokemon's characteristic <br>
+      3-1. Please enter a "Pokedex" in the search bar and click "Search" <br>
+      3-2. Please re-enter a "Pokedex" if you search an invalid pokedex or the Pokemon doesn't have characteristics <br>
+      4. The Pokemon card has the Pokemon's name, picture, types, and characteristic <br>
+      5. The card's color is defined by their primary Pokemon type (the 1st type)
+    </p>
+    <h3>Hope you find your favorite Pokemon in this Pokemon World!</h3>
+  </div>
+
+  <div id="search_bar">
+    <input type="text" id="search_input" class="search-input" placeholder="Enter a Pokedex">
+    <button type="submit" id="search_btn" class="search-btn">Search</button>
+  </div>
+
+  <p id="fail"></p>
+
+  <div id="char_card">
+  <div id="char_search" class="char-search"></div>
+  </div>
+
+
+
+    <script src="main.js"></script>
+    <script src="poke01.js"></script>
+    <script src="poke02.js"></script>
+    <script src="poke03.js"></script>
+    <script src="poke04.js"></script>
+    <script src="poke05.js"></script>
+    <script src="poke06.js"></script>
+    <script src="poke07.js"></script>
+    <script src="poke08.js"></script>
+    <script src="poke09.js"></script>
+    <script src="poke10.js"></script>
+    <script src="poke11.js"></script>
+    <script src="poke12.js"></script>
+    <script src="poke13.js"></script>
+    <script src="poke14.js"></script>
+    <script src="poke15.js"></script>
+</body>
+</html>
