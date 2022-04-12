@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW #9</title>
+</head>
+<body>
+    <h1>Interest Survey</h1>
+    <form action='music_survey.php' method="post">
+        <label for="Name">Name:</label>
+        <input type='text' name="name" id="name" required>
+        <br>
+        <br>
+
+        <label for="Age">Age Group:</label>
+        <select name="age" id="age">
+            <option value="under18">Under 18</option>
+            <option value="18to25">18-25</option>
+            <option value="26to45">26-45</option>
+            <option value="46to62">46-62</option>
+            <option value="above62">Above 62</option>
+        </select>
+        <br>
+        <br>
+
+        <label for="Genre">Your Favorite Music Genre:</label>
+        <br>
+        <input type="radio" id="pop" name="genre" value="pop" required>
+        <label for="Pop"> Pop </label><br>
+
+        <input type="radio" id="hip-hop" name="genre" value="hip-hop">
+        <label for="Hip-hop"> Hip-hop </label><br>
+
+        <input type="radio" id="edm" name="genre" value="edm">
+        <label for="Edm"> Electronic Dance Music </label><br>
+
+        <input type="radio" id="rock" name="genre" value="rock">
+        <label for="Rock"> Rock </label><br>
+
+        <input type="radio" id="rnb" name="genre" value="rnb">
+        <label for="Rnb"> R&B </label><br>
+
+        <input type="radio" id="latin" name="genre" value="latin">
+        <label for="Latin"> Latin </label><br>
+
+        <input type="radio" id="kPop" name="genre" value="kPop">
+        <label for="KPop"> K-Pop </label><br>
+
+        <input type="radio" id="country" name="genre" value="country">
+        <label for="Country"> Country </label><br>
+
+        <input type="radio" id="classical" name="genre" value="classical">
+        <label for="Classical"> Classical </label><br>
+
+        <input type="radio" id="metal" name="genre" value="metal">
+        <label for="Metal"> Metal </label><br>
+
+        <input type="radio" id="other" name="genre" value="other">
+        <label for="Other"> Other </label><br>
+        <br>
+
+        <label for="Singer">Your Favorite Singer:</label>
+        <input type='text' name="singer" id="singer" required>
+        <br>
+        <br>
+
+        <label for="Song">Your Favorite Song:</label>
+        <input type='text' name="song" id="song" required>
+        <br>
+        <br>
+
+        <input type='submit' name='submit' id="submit">
+    </form>
+</body>
+</html>
