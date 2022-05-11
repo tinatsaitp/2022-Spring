@@ -2,7 +2,19 @@ const container04 = document.getElementById('container04');
 const pokemon_water01 = document.getElementById('pokemon_water01');
 pokemon_water01.addEventListener('click', groupPokemons04);
 
+let num04 = 0;
+
+function clearContainer04() {
+      document.getElementById('container04').innerHTML = "";
+      num04 = 0;
+};
+
 function groupPokemons04() {
+    if (num04 != 0)
+    {
+      clearContainer04();
+    }
+
     fetch(`https://pokeapi.co/api/v2/egg-group/2/`)
       .then(res => res.json())
       .then(data => {
@@ -16,7 +28,8 @@ function groupPokemons04() {
               $('#container04').append(createPokemonCard04(poke))
           }
       });
-    pokemon_water01.removeEventListener('click', groupPokemons04);
+
+      num04++;
 };
 
 

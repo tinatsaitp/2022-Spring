@@ -2,7 +2,19 @@ const container01 = document.getElementById('container01');
 const pokemon_monster = document.getElementById('pokemon_monster');
 pokemon_monster.addEventListener('click', groupPokemons01);
 
+let num01 = 0;
+
+function clearContainer01() {
+      document.getElementById('container01').innerHTML = "";
+      num01 = 0;
+};
+
 function groupPokemons01() {
+    if (num01 != 0)
+    {
+      clearContainer01();
+    }
+
     fetch(`https://pokeapi.co/api/v2/egg-group/1/`)
       .then(res => res.json())
       .then(data => {
@@ -15,14 +27,16 @@ function groupPokemons01() {
           //createPokemonCard(poke_2);
           //const poke_3 = poke_name.at(2);
           //createPokemonCard(poke_3);
+          
           for (let i = 0; i < 3; i++) {
               const random = Math.floor(Math.random() * poke_name.length);
               let poke = poke_name.at(random)
               console.log(random, poke)
               $('#container01').append(createPokemonCard01(poke))
           }
-      });
-    pokemon_monster.removeEventListener('click', groupPokemons01);
+      }); 
+
+      num01++;
 };
 
 

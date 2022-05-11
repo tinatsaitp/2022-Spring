@@ -2,7 +2,19 @@ const container10 = document.getElementById('container10');
 const pokemon_humanlike = document.getElementById('pokemon_humanlike');
 pokemon_humanlike.addEventListener('click', groupPokemons10);
 
+let num10 = 0;
+
+function clearContainer10() {
+      document.getElementById('container10').innerHTML = "";
+      num10 = 0;
+};
+
 function groupPokemons10() {
+    if (num10 != 0)
+    {
+      clearContainer10();
+    }
+
     fetch(`https://pokeapi.co/api/v2/egg-group/8/`)
       .then(res => res.json())
       .then(data => {
@@ -16,7 +28,8 @@ function groupPokemons10() {
               $('#container10').append(createPokemonCard10(poke))
           }
       });
-    pokemon_humanlike.removeEventListener('click', groupPokemons10);
+
+      num10++;
 };
 
 

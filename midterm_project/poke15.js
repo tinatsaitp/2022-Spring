@@ -2,9 +2,19 @@ const container15 = document.getElementById('container15');
 const pokemon_others = document.getElementById('pokemon_others');
 pokemon_others.addEventListener('click', groupPokemons15);
 
+let num15 = 0;
 
+function clearContainer15() {
+      document.getElementById('container15').innerHTML = "";
+      num15 = 0;
+};
 
 function groupPokemons15() {
+    if (num15 != 0)
+    {
+      clearContainer15();
+    }
+
     fetch(`https://pokeapi.co/api/v2/egg-group/15/`)
       .then(res => res.json())
       .then(data => {
@@ -18,7 +28,8 @@ function groupPokemons15() {
               $('#container15').append(createPokemonCard15(poke))
           }
       });
-    pokemon_others.removeEventListener('click', groupPokemons15);
+
+      num15++;
 };
 
 

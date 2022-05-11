@@ -2,7 +2,19 @@ const container11 = document.getElementById('container11');
 const pokemon_mineral = document.getElementById('pokemon_mineral');
 pokemon_mineral.addEventListener('click', groupPokemons11);
 
+let num11 = 0;
+
+function clearContainer11() {
+      document.getElementById('container11').innerHTML = "";
+      num11 = 0;
+};
+
 function groupPokemons11() {
+    if (num11 != 0)
+    {
+      clearContainer11();
+    }
+
     fetch(`https://pokeapi.co/api/v2/egg-group/10/`)
       .then(res => res.json())
       .then(data => {
@@ -16,7 +28,8 @@ function groupPokemons11() {
               $('#container11').append(createPokemonCard11(poke))
           }
       });
-    pokemon_mineral.removeEventListener('click', groupPokemons11);
+
+      num11++;
 };
 
 

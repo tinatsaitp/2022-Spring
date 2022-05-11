@@ -2,7 +2,19 @@ const container14 = document.getElementById('container14');
 const pokemon_dragon = document.getElementById('pokemon_dragon');
 pokemon_dragon.addEventListener('click', groupPokemons14);
 
+let num14 = 0;
+
+function clearContainer14() {
+      document.getElementById('container14').innerHTML = "";
+      num14 = 0;
+};
+
 function groupPokemons14() {
+    if (num14 != 0)
+    {
+      clearContainer14();
+    }
+
     fetch(`https://pokeapi.co/api/v2/egg-group/14/`)
       .then(res => res.json())
       .then(data => {
@@ -16,7 +28,8 @@ function groupPokemons14() {
               $('#container14').append(createPokemonCard14(poke))
           }
       });
-    pokemon_dragon.removeEventListener('click', groupPokemons14);
+
+      num14++;
 };
 
 
