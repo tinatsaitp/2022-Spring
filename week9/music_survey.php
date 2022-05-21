@@ -2,8 +2,8 @@
     //server info and log-in details
     //keep servername the same and change to your username, password, and database name
     $servername = "localhost:3308";
-    $username = "web13";
-    $password = "SP2022web13";
+    $username = "web13dbuser";
+    $password = "SP2022web1010";
     $dbname = "web13db";
     
     //create connection
@@ -28,7 +28,7 @@
 
     //inserting form data into a table in your database
     //student is the name of the table i created and name, age, genre, singer, song are the names of my columns
-    $sql = "INSERT INTO students (name, age, genre, singer, song)
+    $sql = "INSERT INTO survey (name, age, genre, singer, song)
     VALUES ('$name', '$age', '$genre', '$singer', '$song')";
     
     //return status to user
