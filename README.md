@@ -1,2 +1,2 @@
-# (Yun-Ting-Tsai) MEDP 331-01
-2022 Spring Web Production II (Tu 10:10am-1:00pm Section)
+# 2022 Spring (MEDP 331)
+Web Production II assignments and projects are done in the 2022 Spring semester
