@@ -1,12 +1,11 @@
 //PokeDex Source: https://www.youtube.com/watch?v=XL68br6JyYs&t=267s
-const pokemons_num = 15;
 const colors = {
   fire: '#ffa6a6', //lightred
   grass: '#c8ffa8', //lightgrassgreen
   electric: '#fffa9c', //lightyellow
   water: '#c7edff', //lightblue
   ground: '#ffe0c2', //lightorange
-  rock: '#bababa', //lightgray
+  rock: '#b3a18d', //lightgray
   fairy: '#ffccf8', //lightpink
   poison: '#e0b5ff', //lightpurple
   bug: '#9effb1', //lightgreen
@@ -17,8 +16,10 @@ const colors = {
   normal: '#f5dfc1', //skin
   ice: '#e3ffff', //lightlightblue
   ghost: '#e0e0e0', //lightlightgray
-  dark: '#7d7d7d', //lightblack
-  steel: '#b3bbc9' //lightgrayblue
+  dark: '#595959', //lightblack
+  steel: '#b3bbc9', //lightgrayblue
+  shadow: '#919191', //lightgray
+  unknown: '#f0f0f0' //white
 };
 const main_types = Object.keys(colors);
 
@@ -54,6 +55,7 @@ $(function() {
         const poke_types = data01.types.map(type => type.type.name);
         const type = main_types.find(type => poke_types.indexOf(type) > -1);
         const color = colors[type];
+        const abilities = data01.abilities.map(ability => ability.ability.name);
 
         pokemonEl01.style.backgroundColor = color;
         pokemonEl01.style.height = "300px";
@@ -67,36 +69,12 @@ $(function() {
               <h2 class="name">${name}</h2>
               <img src=${data01.sprites.front_default} alt=""/>
               <h3 class="type">Type: <span>${poke_types}</span></h3>
+              <h3 class="type">Ability: <span>${abilities}</span></h3>
         </div>
         `;
         pokemonEl01.innerHTML = pokeInnerHTML;
 
         $('#search_poke').append(pokemonEl01);
-
-      })
-      $.getJSON(`https://pokeapi.co/api/v2/characteristic/${searchId}/`, function(data02) {
-        console.log(data02);
-        const pokemonEl02 = document.createElement('div');
-        const poke_char = data02.descriptions.map(pokename => pokename.description);
-        const characteristic = poke_char.at(7);
-        
-        pokemonEl02.style.marginTop = "-80px";
-        pokemonEl02.style.marginBottom = "20px";
-        //pokemonEl02.style.backgroundColor = "pink";
-        //pokemonEl02.style.borderBottomLeftRadius = "20px";
-        //pokemonEl02.style.borderBottomRightRadius = "20px";          
-
-        const pokeInnerHTML = `
-        <div class="char-search">
-              <h3 class="type">Characteristic: <span>${characteristic}</span></h3>
-              <br>
-              <br>
-              <br>
-        </div>
-        `;
-        pokemonEl02.innerHTML = pokeInnerHTML;
-
-        $('#search_char').append(pokemonEl02);
 
       }).fail(function() {
         clearContainer();
